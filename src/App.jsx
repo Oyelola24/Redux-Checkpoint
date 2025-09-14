@@ -18,7 +18,7 @@ function App() {
         {/* Component for adding new tasks */}
         <AddTask />
         
-        {/* Component for displaying and filtering the task lists */}
+        {/* Component for displaying and filtering the task list */}
         <ListTask />
       </main>
     </div>
