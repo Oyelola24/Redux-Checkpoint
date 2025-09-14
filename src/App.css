@@ -1,0 +1,304 @@
+/* ========================================
+   APP LAYOUT STYLES
+   ======================================== */
+
+/* Main application container */
+.app {
+  max-width: 800px; /* Limit maximum width for better readability */
+  margin: 0 auto; /* Center the application horizontally */
+  padding: 2rem; /* Add padding around the content */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+}
+
+/* Application header styling */
+.app-header {
+  text-align: center; /* Center the header content */
+  margin-bottom: 2rem; /* Add space below the header */
+}
+
+/* Main title styling */
+.app-header h1 {
+  color: #333; /* Dark gray color for good contrast */
+  margin-bottom: 0.5rem; /* Small margin below the title */
+}
+
+/* Main content area */
+.app-main {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack components vertically */
+  gap: 2rem; /* Add consistent spacing between components */
+}
+
+/* ========================================
+   ADDTASK COMPONENT STYLES
+   ======================================== */
+
+/* Container for the add task form */
+.add-task {
+  background: #f8f9fa; /* Light gray background */
+  padding: 1.5rem; /* Internal spacing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+/* Add task section title */
+.add-task h2 {
+  margin-top: 0; /* Remove default top margin */
+  color: #495057; /* Dark gray color */
+}
+
+/* Form layout */
+.add-task form {
+  display: flex; /* Use flexbox for horizontal layout */
+  gap: 1rem; /* Space between form elements */
+  align-items: center; /* Vertically center form elements */
+}
+
+/* Input field for task description */
+.task-input {
+  flex: 1; /* Take up remaining space */
+  padding: 0.75rem; /* Internal padding */
+  border: 2px solid #dee2e6; /* Light gray border */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 1rem; /* Standard font size */
+  transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+/* Input field focus state */
+.task-input:focus {
+  outline: none; /* Remove default browser outline */
+  border-color: #007bff; /* Blue border when focused */
+}
+
+/* Add task button */
+.add-button {
+  padding: 0.75rem 1.5rem; /* Vertical and horizontal padding */
+  background: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem; /* Standard font size */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Add button hover state */
+.add-button:hover {
+  background: #0056b3; /* Darker blue on hover */
+}
+
+/* ========================================
+   LISTTASK COMPONENT STYLES
+   ======================================== */
+
+/* Container for the task list section */
+.list-task {
+  background: #f8f9fa; /* Light gray background */
+  padding: 1.5rem; /* Internal spacing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+/* Task list section title */
+.list-task h2 {
+  margin-top: 0; /* Remove default top margin */
+  color: #495057; /* Dark gray color */
+}
+
+/* Filter buttons container */
+.filter-buttons {
+  display: flex; /* Use flexbox for horizontal layout */
+  gap: 0.5rem; /* Space between buttons */
+  margin-bottom: 1.5rem; /* Space below filter buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+/* Individual filter button styling */
+.filter-buttons button {
+  padding: 0.5rem 1rem; /* Vertical and horizontal padding */
+  border: 2px solid #dee2e6; /* Light gray border */
+  background: white; /* White background */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: all 0.3s; /* Smooth transitions for all properties */
+  font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+/* Filter button hover state */
+.filter-buttons button:hover {
+  border-color: #007bff; /* Blue border on hover */
+}
+
+/* Active filter button styling */
+.filter-buttons button.active {
+  background: #007bff; /* Blue background */
+  color: white; /* White text */
+  border-color: #007bff; /* Blue border */
+}
+
+/* Container for the list of tasks */
+.task-list {
+  display: flex; /* Use flexbox for vertical layout */
+  flex-direction: column; /* Stack tasks vertically */
+  gap: 0.75rem; /* Space between individual tasks */
+}
+
+/* Message shown when no tasks are present */
+.no-tasks {
+  text-align: center; /* Center the text */
+  color: #6c757d; /* Muted gray color */
+  font-style: italic; /* Italic text style */
+  padding: 2rem; /* Generous padding around the message */
+}
+
+/* ========================================
+   TASK COMPONENT STYLES
+   ======================================== */
+
+/* Individual task item container */
+.task {
+  display: flex; /* Use flexbox for horizontal layout */
+  align-items: center; /* Vertically center all elements */
+  gap: 1rem; /* Space between task elements */
+  padding: 1rem; /* Internal spacing */
+  background: white; /* White background */
+  border: 2px solid #dee2e6; /* Light gray border */
+  border-radius: 6px; /* Rounded corners */
+  transition: all 0.3s; /* Smooth transitions for all properties */
+}
+
+/* Task hover state */
+.task:hover {
+  border-color: #007bff; /* Blue border on hover */
+  box-shadow: 0 2px 8px rgba(0,123,255,0.1); /* Subtle blue shadow */
+}
+
+/* Completed task styling */
+.task.completed {
+  background: #f8f9fa; /* Light gray background */
+  opacity: 0.7; /* Reduce opacity to show completion */
+}
+
+/* Completed task description styling */
+.task.completed .task-description {
+  text-decoration: line-through; /* Strike through completed text */
+  color: #6c757d; /* Muted gray color */
+}
+
+/* Checkbox for task completion */
+.task-checkbox {
+  width: 18px; /* Fixed width */
+  height: 18px; /* Fixed height */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+/* Task description text */
+.task-description {
+  flex: 1; /* Take up remaining space */
+  font-size: 1rem; /* Standard font size */
+  color: #333; /* Dark gray color */
+}
+
+/* Input field for editing task description */
+.edit-input {
+  flex: 1; /* Take up remaining space */
+  padding: 0.5rem; /* Internal padding */
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem; /* Standard font size */
+}
+
+/* Container for task action buttons */
+.task-actions {
+  display: flex; /* Use flexbox for horizontal layout */
+  gap: 0.5rem; /* Space between buttons */
+}
+
+/* Base styling for all action buttons */
+.task-actions button {
+  padding: 0.4rem 0.8rem; /* Vertical and horizontal padding */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Show pointer cursor on hover */
+  font-size: 0.85rem; /* Slightly smaller font size */
+  transition: all 0.3s; /* Smooth transitions for all properties */
+}
+
+/* Edit button styling */
+.edit-button {
+  background: #28a745; /* Green background */
+  color: white; /* White text */
+}
+
+/* Edit button hover state */
+.edit-button:hover {
+  background: #1e7e34; /* Darker green on hover */
+}
+
+/* Save button styling (same as edit button) */
+.save-button {
+  background: #28a745; /* Green background */
+  color: white; /* White text */
+}
+
+/* Save button hover state */
+.save-button:hover {
+  background: #1e7e34; /* Darker green on hover */
+}
+
+/* Cancel button styling */
+.cancel-button {
+  background: #6c757d; /* Gray background */
+  color: white; /* White text */
+}
+
+/* Cancel button hover state */
+.cancel-button:hover {
+  background: #545b62; /* Darker gray on hover */
+}
+
+/* Delete button styling */
+.delete-button {
+  background: #dc3545; /* Red background */
+  color: white; /* White text */
+}
+
+/* Delete button hover state */
+.delete-button:hover {
+  background: #c82333; /* Darker red on hover */
+}
+
+/* ========================================
+   RESPONSIVE DESIGN STYLES
+   ======================================== */
+
+/* Mobile and tablet responsive styles */
+@media (max-width: 600px) {
+  /* Reduce padding on smaller screens */
+  .app {
+    padding: 1rem; /* Smaller padding for mobile */
+  }
+  
+  /* Stack form elements vertically on mobile */
+  .add-task form {
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: stretch; /* Make elements full width */
+  }
+  
+  /* Center filter buttons on mobile */
+  .filter-buttons {
+    justify-content: center; /* Center the filter buttons */
+  }
+  
+  /* Stack task elements vertically on mobile */
+  .task {
+    flex-direction: column; /* Stack task elements vertically */
+    align-items: stretch; /* Make elements full width */
+    gap: 0.5rem; /* Reduce gap between elements */
+  }
+  
+  /* Center action buttons on mobile */
+  .task-actions {
+    justify-content: center; /* Center the action buttons */
+  }
+}
